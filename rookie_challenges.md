@@ -37,6 +37,8 @@ Every subsystem logs to AdvantageKit in `periodic()`. Pick one subsystem and add
 ### 9. Indexer control mode experiment
 `Indexer.java` has a TODO suggesting duty cycle, velocity PID, or "torque bang-bang" as control strategies — right now it's plain duty cycle (`set()`). Implement a simple current-based stall detection: if `indexerMotor.getOutputCurrent()` stays above a threshold for more than N milliseconds while intaking, assume a jam and run backwards then forwards for a second to unjam. You'll need a timer, so look into the `Debouncer` or `Timer` classes for that.
 
+## Do the rest of the TODOs somewhere around here
+
 ---
 
 ## Tier 4, New Behavior
